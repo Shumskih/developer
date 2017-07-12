@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class DeveloperTest {
-    public static void main (String args[]) {
+    public static void main(String args[]) {
 
         DeveloperDAO workingWithFile = new DeveloperDAO();
         ArrayList<Developer> developers = new ArrayList<>();
@@ -20,9 +20,29 @@ public class DeveloperTest {
         developers.add(sasha);
         developers.add(dasha);
 
+        Developer arkady = new Developer();
+        developers.add(arkady);
+
+        arkady.setId(7);
+        arkady.setName("Arkady");
+        arkady.setSurname("Kolenkov");
+        arkady.setSpecialization("Java Developer");
+        arkady.setIDontKnowWhat(1);
+        arkady.setSalary(500);
+
+
         workingWithFile.saveFile(developers);
 
         workingWithFile.openFile();
+
+
+        System.out.println();
+        System.out.println(arkady.getId());
+        System.out.println(arkady.getName());
+        System.out.println(arkady.getSurname());
+        System.out.println(arkady.getSpecialization());
+        System.out.println(arkady.getIDontKnowWhat());
+        System.out.println(arkady.getSalary());
 
 
         System.out.println();
