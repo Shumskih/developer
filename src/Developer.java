@@ -19,6 +19,6 @@ public class Developer  implements Serializable {
     }
 
     public String toString() {
-        return "\n" + id + ", " + name + ", " + surname + ", " + specialization + ", " + iDontNoWhat + ", " + salary;
+        return "\n" + id + ", " + name + ", " + surname + ", " + specialization + ", " + iDontNoWhat + ", " + "$" + salary;
     }
 }
