@@ -3,8 +3,15 @@ import java.util.ArrayList;
 
 public class DeveloperDAO {
 
-    public void saveFile() {
+    public void saveFile(ArrayList developers) {
 
+        try ( ObjectOutputStream saveFile = new ObjectOutputStream(new FileOutputStream("developers.txt")) ){
+
+            saveFile.writeObject(developers);
+
+        } catch (IOException e) {
+            System.out.println("Не могу сохранить файл: " + e);
+        }
     }
 
     public void openFile() {
