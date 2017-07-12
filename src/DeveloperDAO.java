@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class DeveloperDAO {
 
     public void saveFile(ArrayList developers) {
-
         try ( ObjectOutputStream saveFile = new ObjectOutputStream(new FileOutputStream("developers.txt")) ){
 
             saveFile.writeObject(developers);
@@ -17,7 +16,7 @@ public class DeveloperDAO {
     public void openFile() {
         try ( ObjectInputStream openFile = new ObjectInputStream(new FileInputStream("developers.txt")) ) {
 
-            ArrayList developers2 = (ArrayList) openFile.readObject();
+            ArrayList<Developer> developers2 = (ArrayList<Developer>) openFile.readObject();
             System.out.println(developers2.toString());
 
         } catch (ClassNotFoundException e) {

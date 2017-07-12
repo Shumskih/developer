@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Developer  implements Serializable {
+public class Developer implements Serializable {
 
     private int id;
     private String name;
@@ -18,7 +18,17 @@ public class Developer  implements Serializable {
         this.salary = salary;
     }
 
+    public int getId() {
+        System.out.print(this.name + "'s id: ");
+        return id;
+    }
+
+    public String getName() {
+        System.out.print("Developer's name: ");
+        return name;
+    }
+
     public String toString() {
-        return "\n" + id + ", " + name + ", " + surname + ", " + specialization + ", " + iDontNoWhat + ", " + "$" + salary;
+        return "\n" + id + ": " + name + ", " + surname + ", " + specialization + ", " + iDontNoWhat + ", " + "$" + salary;
     }
 }
