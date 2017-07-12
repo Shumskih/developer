@@ -28,5 +28,9 @@ public class DeveloperTest {
         System.out.println();
         System.out.println(masha.getId());
         System.out.println(masha.getName());
+        System.out.println(masha.getSurname());
+        System.out.println(masha.getSpecialization());
+        System.out.println(masha.getIDontKnowWhat());
+        System.out.println(masha.getSalary());
     }
 }
